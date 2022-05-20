@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:parampara/constants.dart';
-import 'package:parampara/page/gallery.dart';
 import 'package:parampara/page/home_screen.dart';
 import 'package:parampara/page/shedule.dart';
 
@@ -12,7 +11,6 @@ class home extends StatefulWidget {
 
   @override
   State<home> createState() => _homeState();
-
 }
 
 class _homeState extends State<home> {
@@ -20,8 +18,7 @@ class _homeState extends State<home> {
 //  Widget screen=HomePage();
 
   int _selectedIndex = 0;
-  PageController _pageController= PageController();
-
+  PageController _pageController = PageController();
 
   @override
   void initState() {
@@ -58,12 +55,23 @@ class _homeState extends State<home> {
           backgroundColor: Colors.transparent,
           color: Colors.indigo,
           index: _selectedIndex,
-
           animationDuration: Duration(milliseconds: 300),
           items: <Widget>[
-            Icon(Icons.home, size: 30, color: Colors.white,),
-            Icon(Icons.favorite ,size: 30,color: Colors.white,),
-            Icon(Icons.schedule, size: 30, color: Colors.white,),
+            Icon(
+              Icons.home,
+              size: 30,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.favorite,
+              size: 30,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.schedule,
+              size: 30,
+              color: Colors.white,
+            ),
           ],
           onTap: (index) {
             setState(() {
@@ -73,12 +81,9 @@ class _homeState extends State<home> {
         ),
       ),
     );
-
-
   }
 
   void onTapScreen(int index) {
-
     _selectedIndex = index;
     //
     //
